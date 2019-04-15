@@ -1,0 +1,103 @@
+// ------- Styling specifically for createAcct Page -------
+
+//Import global styling
+@import 'styles';
+
+#createAcctPage, #profilePage {
+    .title {
+        color: white;
+        margin-top: pxToRem(205);
+    }
+
+    .subtitle {
+        font-size: pxToEm(29);
+        line-height: pxToEm(45);
+        color: white;
+        margin-top: pxToRem(60);
+        margin-bottom: pxToRem(60);
+    }
+    
+    #screenIdentifier {
+        position: relative;
+        color: white;
+        
+        #screenContainer {
+            position: relative;
+            white-space: nowrap;
+            
+            .dotCont {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            .whiteLine {
+                width: pxToRem(130);
+                margin-left: pxToRem(15);
+                margin-right: pxToRem(15);
+                border: none;
+                height: 2px;
+                background-color: white;
+                vertical-align: middle;
+            }
+            
+            .fa-circle {
+                font-size: pxToEm(22);
+                vertical-align: middle;
+            }
+        
+            .fa-dot-circle {
+                font-size: pxToEm(70);
+                vertical-align: middle;
+            }
+            
+            #dot1, #circle2, #circle3 {
+                display: none;
+            }
+            
+            #dot1 {
+                margin-left: pxToRem(40); 
+            }
+            
+            #dotCont1 {
+                margin-left: pxToRem(-24);
+            }
+        }
+    }
+    
+    .formContainer {
+        margin-top: pxToRem(80);
+    }
+
+    .inputWithIcon {
+        margin-bottom: pxToRem(45);
+    }
+
+    #formStep2{
+        display: none;
+    }
+    
+    //Tablet
+    @media only screen and (min-width: 768px) {
+        .container {
+            padding-top: pxToRem(200);
+        }
+    }
+    
+    
+    //Desktop
+    @media only screen and (min-width: 1000px) {
+        .container {
+            padding-top: pxToRem(100);
+            
+            #screenIdentifier {
+                margin-bottom: pxToRem(120);
+            }
+            
+            .formContainer {
+                select {
+                    text-indent: pxToRem(70);
+                }
+            }
+        }
+    }
+}

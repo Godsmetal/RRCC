@@ -1,0 +1,75 @@
+// ------- Styling specifically for Profile Page -------
+
+//Import global styling
+@import 'styles';
+@import 'createAcct';
+
+#profilePage {
+    .container {
+        padding-bottom: pxToRem(140);
+    }
+    
+    .subtitle {
+        padding: 0 pxToRem(40);
+        margin-bottom: pxToRem(20);
+    }
+    
+    #help {
+        color: white;
+        text-align: center;
+        display: block;
+        font-family: $lighterFont;
+        font-size: ptToEm(14);
+        margin-bottom: pxToRem(80);
+    }
+    
+    .formContainer {
+        margin-top: pxToRem(130);
+    }
+    
+    #password {
+        text-align: left;
+    }
+    
+    #save {
+        background-color: $green;
+    }
+    
+    .logoutContainer {
+        padding: 0 pxToRem(120);
+        width: auto;
+        
+        #logout {
+            background-color: $red;
+            height: pxToRem(90);
+            margin-top: pxToRem(30);
+            width: 100%;
+        } 
+    }
+    
+    //Tablet
+    @media only screen and (min-width: 768px) {
+        .logoutContainer {
+            padding: 0 pxToRem(240);
+        }
+    }
+    
+    
+    //Desktop
+    @media only screen and (min-width: 1000px) {
+        .logoutContainer {
+            position: relative !important;
+            max-width: pxToRem(1000);
+            padding: 0;
+            margin: 0 auto;
+            
+            .submit {
+               border-radius: 0; 
+            }
+        }
+        
+        #password:hover, .submit:hover {
+               cursor: pointer; 
+            }
+    }
+}

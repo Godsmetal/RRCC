@@ -1,0 +1,83 @@
+// ------- Styling specifically for forgotPwd Page -------
+
+//Import global styling
+@import 'styles';
+
+#forgotPwdPage {
+    
+#section-success {
+    display: none;
+}
+
+    .container {
+        padding-top: pxToRem(260);
+
+        .header {
+            text-align: center;
+        }
+
+        .fa-lock {
+            font-size: pxToEm(120);
+            color: white;
+        }
+
+        .fa-check {
+            color: $green;
+            font-size: pxToEm(120);
+        }
+
+        #title {
+            font-size: pxToEm(56);
+            line-height: pxToRem(70);
+            margin-top: pxToRem(70);
+            color: white;
+        }
+
+        .subtitle {
+            font-family: "Helvetica Neue-Thin", sans-serif;
+            font-size: pxToEm(29);
+            line-height: pxToEm(40);
+            margin-top: pxToRem(60);
+            color: white;
+        }
+
+        .success {
+            display: block;
+            line-height: pxToEm(90);
+        }
+    }
+    
+    #reset-confirm {
+        
+        .formContainer {
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: white;
+            text-align: center;
+            
+            margin-bottom: pxToRem(70);
+            line-height: pxToRem(60);
+        }
+        
+        .inputWithIcon {
+            margin-top: pxToRem(40);
+        }
+    }
+    
+    //Tablet
+    @media only screen and (min-width: 768px) {
+        .container {
+            padding-top: pxToRem(520);
+        }
+    }
+    
+    
+    //Desktop
+    @media only screen and (min-width: 1000px) {
+        .subtitle {
+            margin-bottom: pxToRem(100);
+        }
+    }
+}

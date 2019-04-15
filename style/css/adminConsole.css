@@ -1,0 +1,469 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(../../assets/fonts/HelveticaNeue-Medium.ttf) format("truetype");
+  font-weight: lighter; }
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url(../../assets/fonts/HelveticaNeue-Bold.ttf) format("truetype");
+  font-weight: bold; }
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url(../../assets/fonts/HelveticaNeue-Light.ttf) format("truetype");
+  font-weight: lighter; }
+@font-face {
+  font-family: 'Helvetica Neue Thin';
+  src: url(../../assets/fonts/HelveticaNeue-Thin.ttf) format("truetype");
+  font-weight: lighter; }
+@font-face {
+  font-family: 'Helvetica Neue Italic';
+  src: url(../../assets/fonts/HelveticaNeue-It.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  margin: 0; }
+
+html, body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+h1 {
+  letter-spacing: 0.046875em; }
+
+h2 {
+  font-family: "Helvetica Neue Light";
+  font-weight: lighter;
+  letter-spacing: 0.03125em; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+i {
+  font-size: 1.25em; }
+
+.centered {
+  text-align: center;
+  margin: 0 auto; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.block {
+  display: block; }
+
+.inline {
+  display: inline-block; }
+
+.hidden {
+  display: none; }
+
+.vertCenter {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.submit {
+  background-color: #c92e5f;
+  border-radius: 30px;
+  border-width: 0;
+  color: white;
+  font-size: 1.0625em;
+  letter-spacing: 1px; }
+
+.inputWithIcon {
+  position: relative; }
+  .inputWithIcon i {
+    position: absolute;
+    left: 0.6875em;
+    top: 0.5625em;
+    font-size: 1.25em; }
+  .inputWithIcon input, .inputWithIcon select {
+    padding-left: 2.8125rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5rem;
+    box-shadow: inset 0 0 1px #666;
+    border: none;
+    font-family: "Helvetica Neue Light";
+    font-weight: lighter;
+    font-size: 0.8125em;
+    color: #6A6A6A;
+    letter-spacing: .5px; }
+
+.inputNoIcon {
+  box-sizing: border-box;
+  padding-left: 0.46875rem;
+  width: 100%;
+  height: 2.5rem;
+  box-shadow: inset 0 0 1px #666;
+  border: none;
+  font-family: "Helvetica Neue Light";
+  font-weight: lighter;
+  font-size: 0.8125em;
+  color: #6A6A6A;
+  letter-spacing: .5px; }
+
+.fa-phone {
+  transform: rotate(90deg); }
+
+.backgroundImage {
+  background: url(../../assets/images/background-image.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center; }
+
+.formContainer {
+  margin-top: 5rem;
+  padding: 0 3.75rem;
+  width: 100%;
+  box-sizing: border-box; }
+  .formContainer .submit {
+    width: 100%;
+    height: 2.8125rem;
+    margin-top: 1.875rem; }
+  .formContainer #login {
+    display: block;
+    color: white;
+    margin-top: 1.25rem;
+    text-align: center;
+    letter-spacing: 1px; }
+
+.disabledDrop {
+  color: black;
+  font-family: "Helvetica Neue Light";
+  font-size: 1em;
+  box-shadow: inset 0 0 1px #666;
+  border: none;
+  box-sizing: border-box;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: unset; }
+  .disabledDrop:disabled {
+    box-shadow: none;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    /* For IE10 */ }
+    .disabledDrop:disabled ::-ms-expand {
+      display: none; }
+
+.footer {
+  height: 2.8125rem;
+  border-top: 2px solid #cacaca;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  /*
+  ul:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+  }
+  */ }
+  .footer ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: inherit; }
+  .footer i {
+    color: #333333;
+    font-size: 1.625em; }
+  .footer .active i {
+    color: #5b8ec5; }
+
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    padding: 0 7.5rem; } }
+@media only screen and (min-width: 1000px) {
+  .formContainer {
+    position: relative !important;
+    max-width: 31.25rem;
+    padding: 0;
+    margin: 0 auto; }
+    .formContainer .submit {
+      border-radius: 0; }
+    .formContainer .submit:hover {
+      cursor: pointer; } }
+#adminConsole {
+  background-color: #eaeaea; }
+  #adminConsole .header {
+    width: 100%;
+    height: 4.84375rem;
+    background-color: #5b8ec5;
+    position: relative; }
+    #adminConsole .header #title {
+      font-family: "Helvetica Neue Light";
+      font-size: 1.25em;
+      color: white;
+      position: absolute;
+      bottom: 0.78125rem;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  #adminConsole #navigation {
+    position: relative;
+    font-size: 0.8125em;
+    color: #999999;
+    padding: 0 0 0.46875rem;
+    margin: 1.875rem 0.46875rem 0rem;
+    white-space: nowrap;
+    text-align: center; }
+    #adminConsole #navigation li {
+      margin-right: 0.625rem;
+      padding-bottom: 0.5rem; }
+    #adminConsole #navigation li.active {
+      color: #757575;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #5b8ec5;
+      background-color: transparent;
+      z-index: 1; }
+    #adminConsole #navigation hr {
+      border-bottom: 1px solid #999999;
+      margin: 0;
+      position: absolute;
+      z-index: -1;
+      bottom: 7px;
+      width: 100%; }
+  #adminConsole #news, #adminConsole #employees, #adminConsole #pending, #adminConsole #compare {
+    font-family: "Helvetica Neue Light";
+    padding: 1.25rem 0.46875rem 4.0625rem 0.46875rem; }
+  #adminConsole .searchBar {
+    margin-bottom: 1.09375rem; }
+    #adminConsole .searchBar i, #adminConsole .searchBar ::placeholder {
+      color: #999999; }
+  #adminConsole table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%; }
+    #adminConsole table tr th {
+      font-size: 0.875em;
+      color: #999999;
+      padding-bottom: 0.3125rem; }
+    #adminConsole table tr td {
+      max-width: 7.03125rem;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-left: 0.3125rem; }
+    #adminConsole table .collapsed {
+      font-size: 0.875em;
+      background-color: white;
+      box-shadow: inset 0 0 1px #666;
+      border: none;
+      height: 3.4375rem; }
+      #adminConsole table .collapsed i {
+        font-size: 1.5625em !important;
+        color: #5b8ec5; }
+      #adminConsole table .collapsed .fa-trash-alt, #adminConsole table .collapsed .fa-minus-circle {
+        color: #f24949;
+        font-size: 1.71875em !important; }
+      #adminConsole table .collapsed .fa-plus-circle, #adminConsole table .collapsed .fa-check-circle {
+        color: #2ac656; }
+      #adminConsole table .collapsed td:first-child {
+        width: 2.03125rem;
+        border-right: 2px solid #eaeaea;
+        text-align: center; }
+      #adminConsole table .collapsed td {
+        text-overflow: ellipsis; }
+        #adminConsole table .collapsed td input {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 1em;
+          color: black;
+          width: 100%;
+          box-shadow: inset 0 0 1px #666;
+          border: none;
+          box-sizing: border-box;
+          height: 2.5rem;
+          padding-left: 0.46875rem;
+          font-family: "Helvetica Neue Light";
+          background-color: transparent; }
+        #adminConsole table .collapsed td input[disabled] {
+          box-shadow: none;
+          padding: 0; }
+      #adminConsole table .collapsed button {
+        outline: transparent;
+        background-color: transparent;
+        border: 0; }
+    #adminConsole table .un-collapsed {
+      background-color: white; }
+      #adminConsole table .un-collapsed .leftUnCollapsed {
+        vertical-align: top;
+        padding-left: 0.9375rem;
+        padding-bottom: 1.25rem; }
+        #adminConsole table .un-collapsed .leftUnCollapsed select, #adminConsole table .un-collapsed .leftUnCollapsed input {
+          margin-left: -4px;
+          padding-left: 5px; }
+      #adminConsole table .un-collapsed .rightUnCollapsed {
+        vertical-align: top;
+        padding: 0 0.3125rem 1.25rem 0;
+        text-overflow: ellipsis; }
+        #adminConsole table .un-collapsed .rightUnCollapsed select, #adminConsole table .un-collapsed .rightUnCollapsed input:disabled {
+          margin-left: 0; }
+      #adminConsole table .un-collapsed select, #adminConsole table .un-collapsed input {
+        font-size: 0.875em;
+        font-family: "Helvetica Neue Light";
+        box-shadow: inset 0 0 1px #666;
+        border: none;
+        box-sizing: border-box;
+        height: 2.5rem;
+        background-color: transparent;
+        color: black; }
+      #adminConsole table .un-collapsed select:disabled, #adminConsole table .un-collapsed input:disabled {
+        box-shadow: none;
+        padding: 0; }
+      #adminConsole table .un-collapsed h2 {
+        color: #999999;
+        font-size: 1em;
+        white-space: normal; }
+      #adminConsole table .un-collapsed span {
+        font-size: 0.875em;
+        white-space: normal; }
+      #adminConsole table .un-collapsed .full {
+        padding: 0.9375rem; }
+      #adminConsole table .un-collapsed .email {
+        width: 100%;
+        margin-left: 0 !important; }
+      #adminConsole table .un-collapsed textarea {
+        resize: none;
+        width: 100%;
+        box-shadow: inset 0 0 1px #666;
+        border: none;
+        box-sizing: border-box;
+        font-size: 0.75em;
+        white-space: pre-line;
+        padding: 0.625rem;
+        font-size: 0.875em;
+        font-family: "Helvetica Neue Light";
+        color: black; }
+      #adminConsole table .un-collapsed textarea:disabled {
+        box-shadow: none;
+        border: none;
+        box-sizing: border-box;
+        padding: 0;
+        background-color: transparent;
+        font-size: 0.875em;
+        font-family: "Helvetica Neue Light"; }
+      #adminConsole table .un-collapsed button {
+        padding: 0; }
+      #adminConsole table .un-collapsed .fa-times-circle {
+        color: #f24949;
+        font-size: 1.5625em; }
+      #adminConsole table .un-collapsed .fa-download, #adminConsole table .un-collapsed .fa-file-upload {
+        color: #5b8ec5;
+        margin-right: 0.625rem; }
+      #adminConsole table .un-collapsed .addNewForm {
+        padding: 0.625rem; }
+        #adminConsole table .un-collapsed .addNewForm .addAttachment .fa-file-upload {
+          color: #5b8ec5; }
+        #adminConsole table .un-collapsed .addNewForm .addAttachment input {
+          padding-top: 10px; }
+        #adminConsole table .un-collapsed .addNewForm .checkBox {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0.9375rem; }
+          #adminConsole table .un-collapsed .addNewForm .checkBox input[type='checkbox'] {
+            display: none; }
+          #adminConsole table .un-collapsed .addNewForm .checkBox label {
+            cursor: pointer;
+            font-size: 0.875em; }
+          #adminConsole table .un-collapsed .addNewForm .checkBox input[type='checkbox'] + label:before {
+            border: 1px solid #333;
+            content: '\00a0';
+            display: inline-block;
+            height: 16px;
+            margin: 0 .25em 0 0;
+            padding: 0;
+            vertical-align: top;
+            width: 16px; }
+          #adminConsole table .un-collapsed .addNewForm .checkBox input[type="checkbox"]:checked + label:before {
+            background: #fff;
+            color: #2ac656;
+            content: "\2713";
+            text-align: center; }
+          #adminConsole table .un-collapsed .addNewForm .checkBox input[type="checkbox"]:focus + label::before {
+            outline: #3b99fc auto 5px; }
+        #adminConsole table .un-collapsed .addNewForm .deptChecks {
+          display: block; }
+          #adminConsole table .un-collapsed .addNewForm .deptChecks label {
+            display: block;
+            margin-top: 0.625rem; }
+        #adminConsole table .un-collapsed .addNewForm .inputWithIcon i {
+          color: #5b8ec5; }
+        #adminConsole table .un-collapsed .addNewForm .addSubmit {
+          margin-top: 1.875rem;
+          margin: 1.875rem auto 0;
+          background-color: #2ac656;
+          color: white;
+          font-size: 1em; }
+      #adminConsole table .un-collapsed #authLevel {
+        margin-bottom: 0.9375rem; }
+    #adminConsole table .spacer {
+      height: 0.3125rem; }
+  #adminConsole .pagination {
+    text-align: right;
+    font-size: 0.9375em;
+    margin-top: 0.78125rem;
+    color: #999999; }
+    #adminConsole .pagination span {
+      vertical-align: top; }
+    #adminConsole .pagination .number {
+      color: black;
+      vertical-align: top; }
+    #adminConsole .pagination .next {
+      margin-left: 1.25rem; }
+      #adminConsole .pagination .next i {
+        margin-left: 0.3125rem; }
+    #adminConsole .pagination .back {
+      margin-left: 1.25rem; }
+      #adminConsole .pagination .back i {
+        margin-right: 0.3125rem; }
+    #adminConsole .pagination .clickable {
+      color: #5b8ec5; }
+  #adminConsole #compare .title {
+    color: #999999; }
+  #adminConsole #compare .fa-upload {
+    color: #5b8ec5;
+    font-size: 3.125em;
+    margin-top: 0.625em; }
+  #adminConsole #compare .fileName {
+    margin-left: 1.25rem; }
+  #adminConsole #compare #csvSuccess, #adminConsole #compare #csvFailed {
+    margin-top: 3.125rem; }
+  #adminConsole #compare table {
+    margin-top: 2.5rem; }
+  #adminConsole #compare #csvUpload {
+    background-color: #2ac656;
+    border-width: 0;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: 1.25rem;
+    width: 6.25rem;
+    height: 1.875rem; }
+  #adminConsole .footer {
+    background-color: #eaeaea; }
+  @media only screen and (min-width: 1000px) {
+    #adminConsole #news, #adminConsole #employees, #adminConsole #pending, #adminConsole #compare, #adminConsole #navigation {
+      width: 68.75rem;
+      margin-left: auto;
+      margin-right: auto; }
+    #adminConsole #notiEditButton:hover, #adminConsole .fa-trash-alt:hover, #adminConsole .fa-chevron-circle-down:hover, #adminConsole .fa-chevron-circle-up:hover, #adminConsole .fa-times-circle:hover, #adminConsole .fa-plus-circle:hover, #adminConsole .addSubmit:hover, #adminConsole .fa-save, #adminConsole #csvUpload {
+      cursor: pointer; }
+    #adminConsole .un-collapsed .inputWithIcon select {
+      text-indent: 2.5rem; } }
+
+/*# sourceMappingURL=adminConsole.css.map */

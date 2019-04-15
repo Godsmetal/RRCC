@@ -1,0 +1,115 @@
+// ------- Styling specifically for a individual notification Page -------
+
+//Import global styling
+@import 'styles';
+
+
+#notifcationPage {
+    //Header Image
+    .imageContainer {
+        width: 100%;
+        height: pxToRem(500);
+
+        //Black overlay of image
+        .overlay {
+            background-color: black;
+            width: inherit;
+            height: inherit; 
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            opacity: 0.7;
+        }  
+    }
+
+    //Content
+    .container {
+        padding: 0 pxToRem(50) pxToRem(140);
+        
+        .title {
+            font-family: $baseFont;
+            margin-bottom: pxToRem(35);
+        }
+        
+        .subtitle {
+            width: 100%;
+            text-align: right;
+            font-family: $lighterFont;
+            white-space: nowrap;
+            
+            i {
+                color: $blue;
+                margin-right: pxToRem(10);
+            }
+            
+            span {
+                margin-right: pxToRem(20);
+            }
+        }
+        
+        .copy {
+            font-family: $lighterFont;
+            margin-top: pxToRem(70);
+            white-space: pre-line;
+        }
+        
+        a {
+            
+            font-family: $lighterFont;
+            font-weight: 100;
+            font-size: ptToEm(14);
+            text-overflow: ellipsis;
+            display: block;
+            margin-top: pxToRem(60);
+            
+            .fa-link {
+                color: $blue;
+                width: 100%;
+                margin-right: pxToRem(15);
+                display: inline;
+            }
+        }
+        
+        button {
+            margin: pxToRem(60) auto 0;
+            background-color: $green;
+            color: white;
+            font-size: 1em;
+            width: 100%;
+            height: pxToRem(95);
+            box-shadow: inset 0 0 1px #666;
+            border: none;
+            box-sizing: border-box;
+        }
+    }
+    
+    //Tablet
+    @media only screen and (min-width: 768px) {
+        .imageContainer {
+            height: pxToRem(760);
+        }
+    }
+    
+    
+    //Desktop
+    @media only screen and (min-width: 1000px) {
+        .imageContainer, .container {
+            width: pxToRem(1200);
+            margin: 0 auto;
+            margin-bottom: pxToRem(40);
+        }
+        
+        .fa-download:hover {
+            cursor: pointer;
+        }
+        
+        button:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+// ------- Styling specifically for Login Page -------
+
+//Import global styling
+@import 'styles';
+
+body {
+    background: url(../../assets/images/background-image.jpg);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+#title {
+    margin-top: pxToRem(336);
+    font-size: pxToEm(56);
+    line-height: pxToRem(70);
+    color: white;
+}
+
+#forgot, #signup {
+    display: block;
+    color: white;
+}
+
+.formContainer {
+    margin-bottom: pxToEm(85);
+    position: absolute;
+    bottom: 0;
+    
+    #password {
+        margin-top: pxToRem(46);
+    }
+    
+    #forgot {
+        font-family: $lighterFont;
+        font-size: pxToEm(25);
+        text-align: right;
+        letter-spacing: .25px;
+        display: inline-block;
+        float: right;
+    }
+    
+    #support {
+        display: block;
+        overflow: auto;
+        margin-top: pxToRem(40);
+        margin-bottom: pxToRem(60);
+    }
+    
+    #login {
+        width: 100%;
+        height: pxToRem(90);
+        margin-top: pxToRem(60);
+    }
+    
+    #signup {
+        margin-top: pxToRem(40);
+        text-align: center;
+    }
+    
+    #help {
+        color: white;
+        font-family: $lighterFont;
+        font-size: pxToEm(25);
+        display: inline-block;
+        letter-spacing: .25px;
+        float: left;
+    }
+}
+
+
+//Desktop
+@media only screen and (min-width: 1000px) {
+    #title {
+        margin-bottom: pxToRem(160);
+    }
+}

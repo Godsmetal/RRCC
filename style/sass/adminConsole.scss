@@ -1,0 +1,470 @@
+// ------- Styling specifically for adminConsole Page -------
+
+//Import global styling
+@import 'styles';
+
+#adminConsole {
+    
+    background-color: #eaeaea;
+    
+    //Top header (blue)
+    .header {
+        width: 100%;
+        height: pxToRem(155);
+        background-color: #5b8ec5;
+        position: relative;
+        
+        #title {
+            font-family: $lighterFont;
+            font-size: pxToEm(40);
+            color: white;
+            position: absolute;
+            bottom: pxToRem(25);
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    
+    //Container for Navigation Bar
+    #navigation {
+        position: relative;
+        font-size: ptToEm(13);
+        color: $lightGray;
+        padding: 0 0 pxToRem(15);
+        margin: pxToRem(60) pxToRem(15) pxToRem(0);
+        white-space: nowrap;
+        text-align: center;
+        
+        //Section headers
+        li {
+            margin-right: pxToRem(20);
+            padding-bottom: pxToRem(16);
+        }
+        
+        //The ativated section header
+        li.active {
+            color: $darkGray;
+            padding-bottom: pxToRem(16);
+            border-bottom: 2px solid $blue;
+            background-color: transparent;
+            z-index: 1;
+        }
+        
+        //Horizontal line indicator for selected section
+        hr {
+            border-bottom: 1px solid $lightGray;
+            margin: 0;
+            position: absolute;
+            z-index: -1;
+            bottom: 7px;
+            width: 100%;
+        }
+    }
+    
+    //Sections
+    #news, #employees, #pending, #compare {
+        font-family: $lighterFont;
+        padding: pxToRem(40) pxToRem(15) pxToRem(130) pxToRem(15);
+    }
+    
+    //Search bar input
+    .searchBar {
+        margin-bottom: pxToRem(35);
+        
+        i, ::placeholder {
+            
+            color: $lightGray;
+        }
+    }
+    
+    //Table display entries from database
+    table {
+        border-collapse: collapse;
+        text-align: left;
+        width: 100%;
+        
+        //Table Row
+        tr {
+            //Table Header
+            th {
+                font-size: ptToEm(14);
+                color: $lightGray;
+                padding-bottom: pxToRem(10);
+            }
+            //Table data
+            td {
+                max-width: pxToRem(225);
+                overflow: hidden;
+                white-space: nowrap;
+                padding-left: pxToRem(10); //Maybe remove this
+            }
+        }
+        
+        //Table row that is collapsed
+        .collapsed {
+            font-size: ptToEm(14);
+            background-color: white;
+            box-shadow: inset 0 0 1px #666;
+            border: none;
+            height: pxToRem(110);
+
+            //Icons
+            i {
+                font-size: pxToEm(50) !important;
+                color: $blue;
+            }
+            
+            .fa-trash-alt, .fa-minus-circle {
+                color: $red;
+                font-size: pxToEm(55) !important;
+            }
+            
+            .fa-plus-circle, .fa-check-circle {
+                color: $green;
+            }
+            
+            //First td (Icon to un-collapse)
+            td:first-child{
+                width: pxToRem(65);
+                border-right: 2px solid #eaeaea;
+                text-align: center;
+            }
+            
+            td {
+                text-overflow: ellipsis;
+                
+                //Basic input
+                input {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: ptToEm(16);
+                    color: black;
+                    width: 100%;
+                    box-shadow: inset 0 0 1px #666;
+                    border: none;
+                    box-sizing: border-box;
+                    height: pxToRem(80);
+                    padding-left: pxToRem(15);
+                    font-family: $lighterFont;
+                    background-color: transparent;
+                }
+                
+                //Input  when disabled
+                input[disabled] {
+                    box-shadow: none;
+                    padding: 0;
+                }
+            }
+            
+            button {
+                outline: transparent;
+                background-color: transparent;
+                border: 0;
+            }
+        }
+        
+        //Row that is expanded
+        .un-collapsed {
+            background-color: white;
+            
+            .leftUnCollapsed {
+                vertical-align: top;
+                padding-left: pxToRem(30);
+                padding-bottom: pxToRem(40);
+                
+                select, input {
+                    margin-left: -4px;
+                    padding-left: 5px;
+                }
+            }
+            
+            .rightUnCollapsed {
+                vertical-align: top;
+
+                padding: 0 pxToRem(10) pxToRem(40) 0;
+                text-overflow: ellipsis;
+                
+                select, input:disabled {
+                    margin-left: 0;
+                }
+            }
+            
+            select, input {
+                font-size: ptToEm(14);
+                font-family: $lighterFont;
+                box-shadow: inset 0 0 1px #666;
+                border: none;
+                box-sizing: border-box;
+                height: pxToRem(80);
+                background-color: transparent;
+                color: black;
+            }
+            
+            select:disabled, input:disabled {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            h2 {
+                color: $lightGray;
+                font-size: ptToEm(16);
+                white-space: normal;
+            }
+            
+            span {
+                font-size: ptToEm(14);
+                white-space: normal;
+            }
+            
+            .full {
+                padding: pxToRem(30);
+            }
+            
+            .email {
+                width: 100%;
+                margin-left: 0 !important;
+            }
+            
+            textarea {
+                resize: none;
+                width: 100%;
+                box-shadow: inset 0 0 1px #666;
+                border: none;
+                box-sizing: border-box;
+                font-size: ptToEm(12);
+                white-space: pre-line;
+                padding: pxToRem(20);
+                font-size: 0.875em;
+                font-family: "Helvetica Neue Light";
+                color: black;
+            }
+            
+            textarea:disabled {
+                box-shadow: none;
+                border: none;
+                box-sizing: border-box;
+                padding: 0;
+                background-color: transparent;
+                font-size: 0.875em;
+                font-family: "Helvetica Neue Light";
+            }
+            
+            button {
+                padding: 0;
+            }
+            
+            .fa-times-circle {
+                color: $red;
+                
+                font-size: pxToEm(50);
+            }
+            
+            .fa-download, .fa-file-upload {
+                color: $blue;
+                margin-right: pxToRem(20);
+            }
+            
+            //Form for adding new entry
+            .addNewForm {
+                padding: pxToRem(20);
+                
+                //Adding attachment
+                .addAttachment {
+                    
+                    .fa-file-upload {
+                        color: $blue;
+                    }
+                    
+                    input {
+                        padding-top: 10px;
+                    }
+                }
+                
+                //Notify checkboxes
+                .checkBox {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 pxToRem(30);
+                    
+                    input[type='checkbox'] {
+                        //visibility: hidden;
+                        display: none;
+                    }
+                    
+                    label {
+                        cursor: pointer;
+                        font-size: ptToEm(14);
+                    }
+                    
+                    //Fake checkbox
+                    input[type='checkbox'] + label:before {
+                        border: 1px solid #333;
+                        content: '\00a0'; //non-breaking space 
+                        display: inline-block;
+                        height: 16px;
+                        margin: 0 .25em 0 0;
+                        padding: 0;
+                        vertical-align: top;
+                        width: 16px;
+                    }
+                    
+                    //When checked indicate it
+                    input[type="checkbox"]:checked + label:before {
+                        background: #fff;
+                        color: $green;
+                        content: "\2713";
+                        text-align: center;
+                    }
+                    
+                    //Make it clickable
+                    input[type="checkbox"]:focus + label::before {
+                        outline: rgb(59, 153, 252) auto 5px;
+                    }
+                }
+                
+                //Check boxes for departments
+                .deptChecks {
+                    display: block;
+                    
+                    label {
+                        display: block;
+                        margin-top: pxToRem(20);
+                    } 
+                }
+                      
+                //Input icons
+                .inputWithIcon {
+                    i {
+                        color: $blue;
+                    }
+                }
+                
+                .addSubmit {
+                    margin-top: pxToRem(60);
+                    margin: pxToRem(60) auto 0;
+                    background-color: $green;
+                    color: white;
+                    font-size: ptToEm(16);
+                }
+            }
+            
+            #authLevel {
+                margin-bottom: pxToRem(30);
+            }
+        }
+        
+        //Space in-between rows
+        .spacer {
+            height: pxToRem(10);
+        }
+    }
+    
+    //Footer of table that handles changing pages of entries
+    .pagination {
+        text-align: right;
+        font-size: pxToEm(30);
+        margin-top: pxToRem(25);
+        color: $lightGray;
+        
+        //Text
+        span {
+            vertical-align: top;
+        }
+        
+        //Entries of 'x'
+        .number {
+            color: black;
+            vertical-align: top;
+        }
+        
+        //Next Button
+        .next {
+            margin-left: pxToRem(40);
+            
+            i {
+                margin-left: pxToRem(10);
+            }
+        }
+        
+        //Back button
+        .back {
+            margin-left: pxToRem(40);
+            
+            i {
+                margin-right: pxToRem(10);
+            }
+        }
+        
+        //Clickable button
+        .clickable {
+            color: $blue;
+        }
+    }
+    
+    //Compare Section
+    #compare {
+        
+        .title {
+            color: $lightGray;
+        }
+        
+        .fa-upload {
+            color: $blue;
+            font-size: ptToEm(50);
+            margin-top: pxToEm(20);
+        }
+        
+        .fileName {
+            margin-left: pxToRem(40);
+        }
+        
+        #csvSuccess, #csvFailed {
+            margin-top: pxToRem(100);
+        }
+        
+        table {
+            margin-top: pxToRem(80);
+        }
+        
+        #csvUpload {
+            background-color: $green;
+            border-width: 0;
+            color: white;
+            font-size: 1em;
+            letter-spacing: 1px;
+            margin-top: pxToRem(40);
+            width: pxToRem(200);
+            height: pxToRem(60);
+        }
+    }
+    
+    //Footer navigation background
+    .footer {
+        background-color: #eaeaea;
+    }
+
+    //Desktop
+    @media only screen and (min-width: 1000px) {
+        
+        #news, #employees, #pending, #compare, #navigation {
+            width: pxToRem(2200);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #notiEditButton:hover, .fa-trash-alt:hover, .fa-chevron-circle-down:hover, .fa-chevron-circle-up:hover, .fa-times-circle:hover, .fa-plus-circle:hover, .addSubmit:hover, .fa-save, #csvUpload {
+            cursor: pointer;
+        }
+        
+        .un-collapsed {
+            .inputWithIcon {
+                select {
+                    text-indent: pxToRem(80);
+                }
+            }
+        }
+        
+    }
+}
